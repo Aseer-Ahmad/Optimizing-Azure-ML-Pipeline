@@ -4,13 +4,6 @@
 In this project we build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
 This model is then compared to an Azure AutoML run.
 
-## Useful Resources
-- [ScriptRunConfig Class](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.scriptrunconfig?view=azure-ml-py)
-- [Configure and submit training runs](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-set-up-training-targets)
-- [HyperDriveConfig Class](https://docs.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.hyperdrive.hyperdriveconfig?view=azure-ml-py)
-- [How to tune hyperparamters](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-tune-hyperparameters)
-
-
 ## Summary
 **In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
 
@@ -30,8 +23,10 @@ AutoML pipeline chose a VotingEnsemble comprised of 10 models. Each model is com
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
 
 The hyperparameters of logistic regresison as optimized by HyperDrive are : 
+```
 Max Iterations : 128
 Regularization strength : 0.167
+```
 This resulted in an accuracy of 0.91527. 
 
 The best accuracy from AutoML comes from the VotingEnsemble with an accuracy of 0.91818. The architecture of this ensemble contains 6 XGBosst, 2 LightGBM, 1 Logistic and 1 SGD. The highest ensemble weights are assigned to XGBosst and LightGBM and the rest of the models have similar weights.
