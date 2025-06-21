@@ -38,5 +38,4 @@ Feature engineering is a big area of improvement which can help in improving the
 
 
 ## Proof of cluster clean up
-**If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
-**Image of cluster marked for deletion**
+![alt text](del.png)
